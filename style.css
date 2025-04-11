@@ -1,0 +1,428 @@
+/* Базовые стили и сброс */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Для плавной прокрутки по якорям */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Основной цвет текста */
+    background-color: #F5F0E1; /* Бежевый/кремовый фон */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #004643; /* Темный сине-зеленый для заголовков */
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007A71; /* Чуть светлее основного темного для ссылок */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Стили секций */
+section {
+    padding: 60px 0;
+}
+
+section:nth-child(even) { /* Чередование фона для лучшего разделения */
+    background-color: #FFFFFF; /* Белый фон для четных секций */
+}
+
+/* Шапка */
+.header {
+    background-color: #004643; /* Темный фон шапки */
+    color: #F5F0E1; /* Светлый текст в шапке */
+    padding: 15px 0;
+    position: sticky; /* Делаем шапку прилипающей */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.brand-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #F5F0E1;
+}
+
+.navigation a {
+    color: #F5F0E1;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #FACC5C; /* Яркий акцентный цвет для ховера */
+    text-decoration: none;
+}
+
+.header-contacts a {
+    color: #F5F0E1;
+    font-size: 1.5rem; /* Размер иконок */
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.header-contacts a:hover {
+     color: #FACC5C; /* Яркий акцентный цвет для ховера */
+}
+
+
+/* Первый экран (Hero) */
+.hero {
+    background-color: #004643; /* Темный фон */
+    color: #F5F0E1; /* Светлый текст */
+    text-align: center;
+    padding: 80px 0; /* Больше отступов */
+}
+
+.hero h1 {
+    color: #FFFFFF; /* Чисто белый для главного заголовка */
+    margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto; /* Центрирование и отступ */
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #FACC5C; /* Яркий акцентный цвет */
+    color: #004643; /* Темный текст на кнопке */
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #e6b84a; /* Чуть темнее при наведении */
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Преимущества */
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+    gap: 30px;
+    text-align: center;
+}
+
+.advantage-item i {
+    font-size: 2.5rem;
+    color: #004643; /* Цвет иконок */
+    margin-bottom: 1rem;
+}
+
+.advantage-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Услуги */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background-color: #fff; /* Белый фон карточек */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 70, 67, 0.1); /* Легкая тень */
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+}
+
+.service-card ul {
+    margin-top: 15px;
+}
+
+.service-card li {
+    margin-bottom: 8px;
+}
+
+.service-card strong {
+    color: #004643;
+}
+
+.service-note { /* Стиль для карточки с примечанием */
+    background-color: #e8f3f3; /* Слегка другой фон */
+    border-left: 5px solid #007A71;
+}
+
+
+/* Процесс заказа */
+.process {
+     background-color: #F5F0E1; /* Снова бежевый фон */
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+}
+
+.step {
+    flex: 1;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: #004643; /* Темный кружок */
+    color: #F5F0E1; /* Светлый номер */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem auto; /* Центрирование */
+}
+
+.step h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Контакты */
+.contact {
+    text-align: center;
+     background-color: #fff; /* Белый фон */
+}
+
+.contact-options {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Расстояние между кнопками */
+    flex-wrap: wrap; /* Перенос на новую строку если не влезает */
+}
+
+.contact-link {
+    display: inline-flex; /* Чтобы иконка и текст были в строку */
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-link i {
+    margin-right: 10px; /* Отступ иконки от текста */
+    font-size: 1.5rem;
+}
+
+.phone-link {
+    background-color: #004643; /* Темный фон */
+    color: #F5F0E1; /* Светлый текст */
+}
+.phone-link:hover {
+    background-color: #003330; /* Чуть темнее */
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.telegram-link {
+    background-color: #2AABEE; /* Цвет Telegram */
+    color: #fff; /* Белый текст */
+}
+.telegram-link:hover {
+    background-color: #1f9cdb; /* Чуть темнее */
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.contact-note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Стили для формы (если раскомментируешь) */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.contact-form h3 {
+    text-align: center;
+    color: #004643;
+    margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit; /* Наследовать шрифт */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Разрешить изменять высоту */
+}
+
+.contact-form button {
+    width: 100%; /* Кнопка на всю ширину формы */
+    /* Используем стили .cta-button */
+}
+
+
+/* Подвал */
+.footer {
+    background-color: #004643; /* Темный фон */
+    color: #F5F0E1; /* Светлый текст */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Отступ от последнего блока */
+}
+
+.footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .header .container, .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navigation {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+     .navigation a {
+        margin: 0 10px; /* Уменьшаем отступы */
+    }
+    .header-contacts {
+         margin-top: 10px;
+    }
+
+    .process-steps {
+        flex-direction: column; /* Шаги друг под другом */
+        align-items: center;
+    }
+    .step {
+        max-width: 400px; /* Ограничиваем ширину шага */
+    }
+
+    .contact-options {
+        flex-direction: column; /* Кнопки контактов друг под другом */
+        align-items: center; /* Центрируем */
+        gap: 15px;
+    }
+    .contact-link {
+        width: 80%; /* Задаем ширину кнопок */
+        justify-content: center; /* Центрируем текст и иконку */
+    }
+}
+
+@media (max-width: 480px) {
+     h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .navigation a {
+        display: block; /* Ссылки навигации друг под другом */
+        margin: 8px 0;
+    }
+    .services-grid {
+        grid-template-columns: 1fr; /* Одна карточка в ряд */
+    }
+     .cta-button, .contact-link {
+         padding: 10px 20px;
+         font-size: 1rem;
+     }
+}
